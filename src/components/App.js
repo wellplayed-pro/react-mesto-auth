@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
-import {api} from "../utils/api"
+import { api } from "../utils/api";
 import ImagePopup from "./ImagePopup";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
@@ -13,7 +13,7 @@ import Register from "./Register.js";
 import ProtectedRoute from "./ProtectedRoute";
 import InfoTooltip from "./InfoTooltip";
 import * as auth from "../utils/auth";
-import { CurrentUserContext } from "../contexts/CurrentUserContext"
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 
 

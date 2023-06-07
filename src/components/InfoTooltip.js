@@ -2,10 +2,10 @@ import React from "react";
 import successImage from "../images/reg_ok.svg";
 import errorImage from "../images/reg_error.svg";
 
-function InfoTooltip({ tooltipIcon, title, isOpen, onClose, onOverlayClose }) {
+function InfoTooltip({ tooltipIcon, title, isOpen, onClose }) {
 
   return (
-    <div className={`popup popup_type_tooltip ${isOpen ? "popup_opened" : ""}`} onClick={onOverlayClose}>
+    <div className={`popup popup_type_tooltip ${isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container-infotooltip">
         <div className="popup__icon-tooltip">
           {tooltipIcon === "success" && (

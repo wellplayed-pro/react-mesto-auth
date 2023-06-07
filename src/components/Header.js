@@ -1,6 +1,6 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom"
-import logo from "../images/logo.svg"
+import { useLocation, Link } from "react-router-dom";
+import logo from "../images/logo.svg";
 
 export default function Header({ email, signOut, loggedIn }) {
   const location = useLocation();
