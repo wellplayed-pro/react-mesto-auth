@@ -139,13 +139,13 @@ function checkToken() {
         setEmail(res.data.email);
         navigate("/");
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   }
 }
 
 useEffect(() => {
   checkToken();
-});
+},);
 
 //auth 
   function handleLogin(password, email) {
