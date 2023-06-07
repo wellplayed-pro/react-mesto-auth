@@ -2,19 +2,19 @@ import React, { useContext, useEffect, useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar}) {
+function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const currentUser = useContext(CurrentUserContext);
   const inputAvatar = useRef();
 
   useEffect(() => {
-    inputAvatar.current.value = ''
-  }, [currentUser, isOpen])
+    inputAvatar.current.value = "";
+  }, [currentUser, isOpen]);
 
   function handleSubmit(evt) {
     evt.preventDefault();
     onUpdateAvatar({
       avatar: inputAvatar.current.value,
-    })
+    });
   }
 
   return (
@@ -24,8 +24,8 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar}) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      buttonText="Сохранить">
-
+      buttonText="Сохранить"
+    >
       <label className="popup__form">
         <input
           id="input-avatar"
@@ -34,12 +34,12 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar}) {
           name="avatar"
           className="popup__input popup__input_type_link"
           placeholder="Ссылка на аватар"
-          required />
+          required
+        />
         <span id="input-avatar-error" className="popup__error"></span>
       </label>
     </PopupWithForm>
-  )
-
+  );
 }
 
-export default EditAvatarPopup
+export default EditAvatarPopup;

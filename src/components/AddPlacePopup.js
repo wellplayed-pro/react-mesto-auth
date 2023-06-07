@@ -16,7 +16,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   useEffect(() => {
     setPlaceName("");
     setPlaceLink("");
-  }, [isOpen])
+  }, [isOpen]);
 
   return (
     <PopupWithForm
@@ -25,7 +25,8 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      buttonText="Создать">
+      buttonText="Создать"
+    >
       <input
         id="input-title"
         type="text"
@@ -51,9 +52,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       />
       <span id="input-link-error" className="popup__error"></span>
     </PopupWithForm>
-
-  )
-
+  );
 }
 
 export default AddPlacePopup;

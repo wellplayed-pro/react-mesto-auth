@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-
 function Login({ onLogin }) {
   const [formValue, setFormValue] = useState({
     password: "",
     email: "",
-  })
-
+  });
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -14,20 +12,23 @@ function Login({ onLogin }) {
     onLogin(password, email);
   }
 
-
   function handleChange(evt) {
-    const {name, value} = evt.target;
+    const { name, value } = evt.target;
     setFormValue({
       ...formValue,
-      [name]: value
-    })
+      [name]: value,
+    });
   }
 
-
   return (
-    <div className="auth" >
+    <div className="auth">
       <h2 className="auth__title">Вход</h2>
-      <form name="login" className="auth__form" onSubmit={handleSubmit} noValidate>
+      <form
+        name="login"
+        className="auth__form"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <input
           type="email"
           name="email"
@@ -35,7 +36,8 @@ function Login({ onLogin }) {
           placeholder="Email"
           value={formValue.email || ""}
           onChange={handleChange}
-          required />
+          required
+        />
         <input
           type="password"
           name="password"
@@ -43,17 +45,14 @@ function Login({ onLogin }) {
           placeholder="Пароль"
           value={formValue.password || ""}
           onChange={handleChange}
-          required />
-        <button
-          className="auth__submit-button"
-          type="submit"
-        >
+          required
+        />
+        <button className="auth__submit-button" type="submit">
           Войти
         </button>
       </form>
     </div>
-  )
+  );
 }
-
 
 export default Login;

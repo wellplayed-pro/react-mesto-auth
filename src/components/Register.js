@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 function Register({ onRegister }) {
   const [userData, setUserData] = useState({
     email: "",
-    password: ""
-  })
+    password: "",
+  });
 
   function handleChange(evt) {
-    const { name, value} = evt.target;
+    const { name, value } = evt.target;
     setUserData({
       ...userData,
-      [name]: value
-    })
+      [name]: value,
+    });
   }
-
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -23,12 +21,10 @@ function Register({ onRegister }) {
     onRegister(password, email);
   }
 
-
   return (
     <div className="auth" onSubmit={handleSubmit}>
       <h2 className="auth__title">Регистрация</h2>
       <form name="register" className="auth__form" onSubmit={handleSubmit}>
-
         <input
           type="email"
           name="email"
@@ -36,8 +32,9 @@ function Register({ onRegister }) {
           placeholder="Email"
           onChange={handleChange}
           value={userData.email}
-          required />
-        
+          required
+        />
+
         <input
           type="password"
           name="password"
@@ -45,12 +42,10 @@ function Register({ onRegister }) {
           placeholder="Пароль"
           onChange={handleChange}
           value={userData.password}
-          required />
-        
-        <button
-          className="auth__submit-button"
-          type="submit"
-        >
+          required
+        />
+
+        <button className="auth__submit-button" type="submit">
           Зарегистрироваться
         </button>
         <Link className="auth__link" to="/sign-in">
@@ -58,7 +53,7 @@ function Register({ onRegister }) {
         </Link>
       </form>
     </div>
-  )
+  );
 }
 
 export default Register;

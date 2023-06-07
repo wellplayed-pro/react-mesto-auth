@@ -24,7 +24,8 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      buttonText="Сохранить">
+      buttonText="Сохранить"
+    >
       <label className="popup__form">
         <input
           id="input-name"
@@ -36,7 +37,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           maxLength="40"
           required
           onChange={(evt) => setName(evt.target.value)}
-          value={name ?? ''}
+          value={name ?? ""}
         />
         <span id="input-name-error" className="popup__error"></span>
         <input
@@ -49,12 +50,12 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           maxLength="200"
           required
           onChange={(evt) => setDescription(evt.target.value)}
-          value={description ?? ''}
+          value={description ?? ""}
         />
         <span id="input-job-error" className="popup__error"></span>
       </label>
     </PopupWithForm>
-  )
+  );
 }
 
 export default EditProfilePopup;
