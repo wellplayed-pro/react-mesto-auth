@@ -60,6 +60,7 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard(null);
+    setIsInfoTooltipPopupOpen(false); 
   }
 
   function handleCardClick(card) {
@@ -145,7 +146,7 @@ function checkToken() {
 
 useEffect(() => {
   checkToken();
-},[]);
+});
 
 //auth 
   function handleLogin(password, email) {

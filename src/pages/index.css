@@ -52,7 +52,7 @@
 @import url(../blocks/popup/__title-infotooltip/popup__title-infotooltip.css);
 @import url(../blocks/popup/__container-infotooltip/popup__container-infotooltip.css);
 
-
+@import url(../blocks/auth/auth.css);
 @import url(../blocks/auth/__form/auth__form.css);
 @import url(../blocks/auth/__input/auth__input.css);
 @import url(../blocks/auth/__link/auth__link.css);
