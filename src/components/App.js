@@ -145,7 +145,7 @@ function checkToken() {
 
 useEffect(() => {
   checkToken();
-},);
+},[]);
 
 //auth 
   function handleLogin(password, email) {
